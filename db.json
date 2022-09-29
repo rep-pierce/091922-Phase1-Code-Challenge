@@ -29,6 +29,12 @@
       "name": "Mme. Panda",
       "image": "https://media.giphy.com/media/ALalVMOVR8Qw/giphy.gif",
       "votes": 0
+    },
+    {
+      "name": "Mr. Penguin",
+      "image": "https://thumbs.dreamstime.com/z/cute-penguin-1385651.jpg",
+      "votes": 0,
+      "id": 6
     }
   ]
 }

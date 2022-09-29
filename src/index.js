@@ -32,4 +32,31 @@ function handleSubmit(e) {
 
 }
 
+document.querySelector("#character-form").addEventListener('submit', handleNewCharacter)
+
+function handleNewCharacter(e) {
+    e.preventDefault();
+    let newCharacter = {
+        name: e.target.name.value,
+        image: e.target['image-url'].value,
+        votes: 0
+    }
+    addNewCharacter(newCharacter)
+}
+
+function addNewCharacter(characterObj) {
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(characterObj)
+    })
+
+}
+
+document.querySelector('#reset-btn').onclick = () => {
+    document.querySelector('#vote-count').textContent = 0
+}
+
 creatCharacterBar(url)
